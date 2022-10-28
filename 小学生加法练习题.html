@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<!-- 二十以内的加减法 -->
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>二十以内的加法</title>
+
+
+  <style type="text/css">
+	body{
+		text-align:center;
+		font-size:2em;
+	}
+	input{
+	    padding:1%;
+		margin:2.5%;
+	}
+	input #right{
+	    margin-left:30%;
+	}
+	button{
+	    padding:2%;
+		margin-left:5%;
+	}
+  </style>
+
+
+ </head>
+
+ <body>
+
+<!--   题目div区 -->
+  <h1>加法练习器</h1>
+  <div id="problem" class="">
+	   <input id="left" >
+	   <span class="">+</span>
+	   <input id="right">
+  </div>
+
+<!--   答案div区 -->
+  <div id="answer" class="">
+		A :  <input type="button" id="A">
+		B :  <input type="button" id="B">
+		C :  <input type="button" id="C">
+		D :  <input type="button" id="D">	
+  </div>
+
+
+  <!-- 下一题 -->
+  <div  id="next"  >
+       <input type="button" value="下一题" id="next">
+  </div>
+
+ <script type="text/javascript">
+
+//产生随机数
+       var num1=parseInt(10* Math.random());
+       var num2=parseInt(10* Math.random());
+       
+
+
+ //获取元素，把产生的随机数赋值给按钮框
+		var num_1=document.querySelector("input#left");
+		num_1.value=num1;
+		var num_2=document.querySelector("input#right");
+		num_2.value=num2;
+        answers=document.querySelectorAll("div#answer input")
+
+        var answer=num1+num2;
+
+		//利用循环放错误答案
+		for (var i = 0;i < 4 ;i ++ ){
+            
+			var ranNumber=parseInt(20*Math.random());
+			answers[i].value=ranNumber;
+
+			//是否回答正确
+			answers[i].onclick=function(){
+
+				var res=parseInt(this.value);	
+				if(res==answer){
+
+					alert("ok");
+				}
+				else{
+					alert("wrong");
+				}
+          }
+		}
+ 
+		//产生一个随机数a，答案放入对应的数组中
+		//覆盖
+        var a=parseInt(4* Math.random());
+        answers[a].value=answer;
+
+		
+
+		//下一题
+		//捕捉next这个元素
+		var Next=document.querySelector("div#next input");
+		//页面的刷新
+		Next.onclick=function(){
+			window.location.reload();
+		}
+	 	 
+ </script>
+ </body>
+</html>
