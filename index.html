@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="Author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "楷体";
+        }
+        header{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://ts1.cn.mm.bing.net/th/id/R-C.9b7bd4796f5cf1c62476e5b96b0f42d9?rik=HvoE0W771oZi4Q&riu=http%3a%2f%2fpic.bizhi360.com%2fbbpic%2f56%2f7156.jpg&ehk=Sa2XTfAn7tIpSefOauFs2QzQAaxZ6%2bdOMUy2PaVeP2k%3d&risl=&pid=ImgRaw&r=0");
+            height: 100vh;	
+            background-size: cover;
+            background-position: center;
+        }
+    
+        ul{
+            float: right;
+            list-style-type: none;
+            margin: 15px;
+        }
+        ul li{
+            display: inline-block;
+        }
+    
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            transition: .6s ease;
+            border-radius: 20px;
+        }
+		ul li a:hover{		
+            background-color: #fff;
+            color: #000;
+        }
+
+        ul li.active a{
+            background-color: #fff;
+            color: #000;
+        }	
+
+        .title{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        .title h1{
+            color: #fff;
+            font-size: 70px;
+            font-family: Century Gothic;
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+	    <div class="main">
+            <ul>
+                <li class="active"><a href="#">首页</a></li>
+                <li><a target="_blank">简介</a></li>
+                <li><a href="homework.html" target="_blank">作业</a></li>
+                <li><a href="qrCode.jpg" target="_blank">二维码</a></li>
+                
+            </ul>
+        </div>
+        <div class="title">
+            <h1><span style="color: crimson;">My</span> Homepage</h1>
+	    </div>
+    </header>
+</body>
+</html>
